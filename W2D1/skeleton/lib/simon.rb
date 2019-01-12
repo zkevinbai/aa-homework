@@ -17,21 +17,36 @@ class Simon
     reset_game
   end
 
+  require "byebug"
+
   def take_turn
     unless @game_over
-      show_sequence
-      require_sequence  
-      round_success_message
-      @sequence_length += 1
+      # debugger
+      show_sequence 
+      response = require_sequence 
+      if response == @seq
+        round_success_message
+        @sequence_length += 1
+      else
+        @game_over = true
+      end 
     end 
   end
 
   def show_sequence
     add_random_color
+    p @seq
   end
 
   def require_sequence
-
+    p "give me the colors, format: red, blue, green, etc"
+    response = gets.chomp
+    if sequence_length == 1
+      response = [response]
+    else
+      response = response.split(",")
+    end 
+    return response
   end
 
   def add_random_color
@@ -39,11 +54,11 @@ class Simon
   end
 
   def round_success_message
-
+    "congratulations, you beat round #{@sequence_length}"
   end
 
   def game_over_message
-
+    p "game over"
   end
 
   def reset_game
@@ -52,3 +67,7 @@ class Simon
     @seq = []
   end
 end
+
+game = Simon.new
+
+game.play
