@@ -36,15 +36,15 @@ class Board
 
     until moved.empty?
       true_idx %= 14
-      pebble = moved.shift
 
       # if true_idx == @p1_idx
       #   @cups[true_idx].push(pebble)
       #   true_idx += 1 unless moved.empty?
       # end
       if true_idx == @p2_idx
-        true_idx += 2
+        true_idx += 1
       else 
+        pebble = moved.shift
         @cups[true_idx].push(pebble)
         true_idx += 1 unless moved.empty?
       end
