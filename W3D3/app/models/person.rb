@@ -1,8 +1,8 @@
 class Person <ActiveRecord::BASE
 
-    belongs_to :house, 
+    has_many :people, 
     primary_key: id,
     foreign_key: house_id,
-    class_name: :house
+    class_name: :person
 }
 end
