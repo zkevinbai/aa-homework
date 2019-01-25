@@ -108,14 +108,15 @@ class MetaCorgiSnacks
   def initialize(snack_box, box_id)
     @snack_box = snack_box
     @box_id = box_id
+    snack_box.methods.grep(/^get_(.*)_info$/) { MetaCorgiSnacks.define_snack $1 }
   end
 
-  def method_missing(name, *args)
-    info = @snack_box.send("get_#{name}_info", @box_id)
-    tastiness = @snack_box.send("get_#{name}_tastiness", @box_id)
-    result = "Bone: #{info}: #{tastiness} "
-    tastiness > 30 ? "* #{result}" : result
-  end
+  # def method_missing(name, *args)
+  #   info = @snack_box.send("get_#{name}_info", @box_id)
+  #   tastiness = @snack_box.send("get_#{name}_tastiness", @box_id)
+  #   result = "Bone: #{info}: #{tastiness} "
+  #   tastiness > 30 ? "* #{result}" : result
+  # end
 
   def self.define_snack(name)
     # Your code goes here...
@@ -130,6 +131,6 @@ end
 
 snack_box = SnackBox.new
 corgi_meta = MetaCorgiSnacks.new(snack_box, 1)
-MetaCorgiSnacks.define_snack("bone")
+# MetaCorgiSnacks.define_snack("bone")
 p corgi_meta.bone
 # meta_snacks.kibble
