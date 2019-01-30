@@ -3,5 +3,29 @@
 <!--
   <%# ruby code that will not be printed %>
   <%#=  ruby code that we want to render %>
+  need the html and ruby comment
 -->
 
+<!--
+<ul>
+    <%@books.each do |book|%>
+        <li><%=book.title%></li>
+    <%end%>
+</ul>
+
+-->
+
+<!--
+  using partials and cheating
+
+  rails finds the _book partial
+-->
+
+<ul>
+  <!--
+    <%# @books.each do |book| %>
+      <%#= render book %>
+    <%# end %>
+  -->
+  <%= render @books %>
+</ul>

@@ -7,12 +7,13 @@ class BooksController < ApplicationController
 
   def show
     @book = Book.find_by(id: params[:id])
-    render json: @book
-    # if @book
-    #   render :show
-    # else
-    #   redirect_to books_url
-    # end
+
+    # render json: @book
+    if @book
+      render :show
+    else
+      redirect_to books_url
+    end
   end
 
   def new
@@ -22,6 +23,9 @@ class BooksController < ApplicationController
 
   def create
     @book = Book.new(book_params)
+
+    # render json: "books are being made"
+    # render json: @book
 
     if @book.save
       # show user the book show page

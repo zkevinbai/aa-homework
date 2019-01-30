@@ -1,0 +1,47 @@
+<h1>Edit book in Library!</h1>
+
+<!-- action: url to which we want to send data -->
+<!-- method: http method that we want to use -->
+<!-- <form action = "<%#=book_url(@book.id)%>" method="post"> -->
+<!-- <form action = "<%#=/books/#{@book.id}%>" method="post"> -->
+
+<%= render 'form', action: :edit, book: @book %>
+
+<!--
+<form action = "<%#=book_url(@book.id)%>" method="post">
+    <input type="hidden" name="_method" value="PATCH">
+    
+    <label for="title">Title</lablel>
+        <input id="title" type="text" name="book[title]" value="<%=@book.title%>">
+    
+    <br>
+
+    <label for="author">Author</lablel>
+        <input id="author" type="text" name="book[author]" value="<%=@book.author%>">
+
+    <br>
+
+    <label for="year">Year</lablel>
+        <input id="year" type="text" name="book[year]" value="<%=@book.year%>">
+
+    <br>
+
+    <label for="category">Category</lablel>
+    <select id="category" name="book[category]">
+        <option value="Fiction" <%= @book.category == "Fiction" ? "selected" : ""%> >Fiction</option>
+        <option value="NonFiction" <%= @book.category == "NonFiction" ? "selected" : ""%> >NonFiction</option>
+        <option value="Memoir" <%= @book.category == "Memoir" ? "selected" : ""%> >Memoir</option>
+    </select>
+
+    <br><br>
+
+    <label for="description">Description</lablel>
+        <textarea id="description" name="book[description]">
+            <%=@book.description%>
+        </textarea>
+
+    <br><br>
+
+    <input type="submit" value="Update book in library">
+</form>
+-->
