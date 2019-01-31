@@ -4,7 +4,7 @@
     <%= render 'shared/errors' %>
     <%= render 'form', cat: @cat %>
     <%= content_for :footer do %>
-        <p>This is the <%= File.basename("new.html.erb", ".html.erb") %> cat place </p>
+        <%= footer_gen %>
     <% end %>
 </div></section>
 
