@@ -69,6 +69,7 @@ group :test do
   gem 'chromedriver-helper'
 
   #capyday
+  gem 'shoulda'
   gem 'faker'
   gem 'guard-rspec'
   gem 'launchy'
