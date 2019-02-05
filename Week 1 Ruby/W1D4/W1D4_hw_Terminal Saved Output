@@ -1,0 +1,929 @@
+Last login: Tue Jan  8 20:08:19 on ttys000
+gem install awesome_print
+~ kevinbai$: gem install awesome_print
+Fetching: awesome_print-1.8.0.gem (100%)
+Successfully installed awesome_print-1.8.0
+Parsing documentation for awesome_print-1.8.0
+Installing ri documentation for awesome_print-1.8.0
+Done installing documentation for awesome_print after 0 seconds
+1 gem installed
+~ kevinbai$: which git
+/usr/local/bin/git
+~ kevinbai$: git config --global user.email
+lkevin957@gmail.com
+~ kevinbai$: git config user.email "fake@email.com"
+fatal: not in a git directory
+~ kevinbai$: git config --global user.email
+lkevin957@gmail.com
+~ kevinbai$: ls
+Applications	Documents	Google Drive	Music		WebDev
+Coding		Downloads	Library		Pictures
+Desktop		Dropbox		Movies		Public
+~ kevinbai$: cd Desktop/
+~/Desktop kevinbai$: ls
+App Academy alias	Documents alias		html-5
+~/Desktop kevinbai$: mkdir w1d4_hw
+~/Desktop kevinbai$: cd w1d4_hw/
+~/Desktop/w1d4_hw kevinbai$: touch sample.rb
+~/Desktop/w1d4_hw kevinbai$: ls
+sample.rb
+~/Desktop/w1d4_hw kevinbai$: git status
+fatal: not a git repository (or any of the parent directories): .git
+~/Desktop/w1d4_hw kevinbai$: git status
+fatal: not a git repository (or any of the parent directories): .git
+~/Desktop/w1d4_hw kevinbai$: git init
+Initialized empty Git repository in /Users/kevinbai/Desktop/w1d4_hw/.git/
+~/Desktop/w1d4_hw kevinbai$: git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	sample.rb
+
+nothing added to commit but untracked files present (use "git add" to track)
+~/Desktop/w1d4_hw kevinbai$: git add sample.rb 
+~/Desktop/w1d4_hw kevinbai$: git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   sample.rb
+
+~/Desktop/w1d4_hw kevinbai$: touch new_file.rb
+~/Desktop/w1d4_hw kevinbai$: ls
+new_file.rb	sample.rb
+~/Desktop/w1d4_hw kevinbai$: git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   sample.rb
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	new_file.rb
+
+~/Desktop/w1d4_hw kevinbai$: touch new_file_2.rb
+~/Desktop/w1d4_hw kevinbai$: touch new_file_3.rb
+~/Desktop/w1d4_hw kevinbai$: git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   sample.rb
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	new_file.rb
+	new_file_2.rb
+	new_file_3.rb
+
+~/Desktop/w1d4_hw kevinbai$: add -A
+-bash: add: command not found
+~/Desktop/w1d4_hw kevinbai$: git add -A
+~/Desktop/w1d4_hw kevinbai$: git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   new_file.rb
+	new file:   new_file_2.rb
+	new file:   new_file_3.rb
+	new file:   sample.rb
+
+~/Desktop/w1d4_hw kevinbai$: git reset #{new_file.rb}
+~/Desktop/w1d4_hw kevinbai$: git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	new_file.rb
+	new_file_2.rb
+	new_file_3.rb
+	sample.rb
+
+nothing added to commit but untracked files present (use "git add" to track)
+~/Desktop/w1d4_hw kevinbai$: git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	new_file.rb
+	new_file_2.rb
+	new_file_3.rb
+	sample.rb
+
+nothing added to commit but untracked files present (use "git add" to track)
+~/Desktop/w1d4_hw kevinbai$: git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	new_file.rb
+	new_file_2.rb
+	new_file_3.rb
+	sample.rb
+
+nothing added to commit but untracked files present (use "git add" to track)
+~/Desktop/w1d4_hw kevinbai$: git add -A
+~/Desktop/w1d4_hw kevinbai$: git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   new_file.rb
+	new file:   new_file_2.rb
+	new file:   new_file_3.rb
+	new file:   sample.rb
+
+~/Desktop/w1d4_hw kevinbai$: git reset new_file.rb
+~/Desktop/w1d4_hw kevinbai$: git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   new_file_2.rb
+	new file:   new_file_3.rb
+	new file:   sample.rb
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	new_file.rb
+
+~/Desktop/w1d4_hw kevinbai$: git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   new_file_2.rb
+	new file:   new_file_3.rb
+	new file:   sample.rb
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	new_file.rb
+
+~/Desktop/w1d4_hw kevinbai$: git log
+fatal: your current branch 'master' does not have any commits yet
+~/Desktop/w1d4_hw kevinbai$: git add -A
+~/Desktop/w1d4_hw kevinbai$: git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   new_file.rb
+	new file:   new_file_2.rb
+	new file:   new_file_3.rb
+	new file:   sample.rb
+
+~/Desktop/w1d4_hw kevinbai$: git reset new_file.rb 
+~/Desktop/w1d4_hw kevinbai$: git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   new_file_2.rb
+	new file:   new_file_3.rb
+	new file:   sample.rb
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	new_file.rb
+
+~/Desktop/w1d4_hw kevinbai$: git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   new_file_2.rb
+	new file:   new_file_3.rb
+	new file:   sample.rb
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	new_file.rb
+
+~/Desktop/w1d4_hw kevinbai$: git log
+fatal: your current branch 'master' does not have any commits yet
+~/Desktop/w1d4_hw kevinbai$: git log -p
+fatal: your current branch 'master' does not have any commits yet
+~/Desktop/w1d4_hw kevinbai$: git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   new_file_2.rb
+	new file:   new_file_3.rb
+	new file:   sample.rb
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	new_file.rb
+
+~/Desktop/w1d4_hw kevinbai$: git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   new_file_2.rb
+	new file:   new_file_3.rb
+	new file:   sample.rb
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	new_file.rb
+
+~/Desktop/w1d4_hw kevinbai$: git reset sample.rb 
+~/Desktop/w1d4_hw kevinbai$: git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   new_file_2.rb
+	new file:   new_file_3.rb
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	new_file.rb
+	sample.rb
+
+~/Desktop/w1d4_hw kevinbai$: git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   new_file_2.rb
+	new file:   new_file_3.rb
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	new_file.rb
+	sample.rb
+
+~/Desktop/w1d4_hw kevinbai$: git log
+fatal: your current branch 'master' does not have any commits yet
+~/Desktop/w1d4_hw kevinbai$: git log -p
+fatal: your current branch 'master' does not have any commits yet
+~/Desktop/w1d4_hw kevinbai$: git add sample.rb 
+~/Desktop/w1d4_hw kevinbai$: git commit -m '[first commit]'
+[master (root-commit) 7722049] [first commit]
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 new_file_2.rb
+ create mode 100644 new_file_3.rb
+ create mode 100644 sample.rb
+~/Desktop/w1d4_hw kevinbai$: status
+-bash: status: command not found
+~/Desktop/w1d4_hw kevinbai$: git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	new_file.rb
+
+nothing added to commit but untracked files present (use "git add" to track)
+~/Desktop/w1d4_hw kevinbai$: git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	new_file.rb
+
+nothing added to commit but untracked files present (use "git add" to track)
+~/Desktop/w1d4_hw kevinbai$: git log
+commit 7722049d0dc00879d32465cab0030ad5fdf3adb6 (HEAD -> master)
+Author: Kevin Bai <lkevin957@gmail.com>
+Date:   Wed Jan 9 21:02:51 2019 -0800
+
+    [first commit]
+~/Desktop/w1d4_hw kevinbai$: git log -p
+commit 7722049d0dc00879d32465cab0030ad5fdf3adb6 (HEAD -> master)
+Author: Kevin Bai <lkevin957@gmail.com>
+Date:   Wed Jan 9 21:02:51 2019 -0800
+
+    [first commit]
+
+diff --git a/new_file_2.rb b/new_file_2.rb
+new file mode 100644
+index 0000000..e69de29
+diff --git a/new_file_3.rb b/new_file_3.rb
+new file mode 100644
+index 0000000..e69de29
+diff --git a/sample.rb b/sample.rb
+new file mode 100644
+index 0000000..e69de29
+~/Desktop/w1d4_hw kevinbai$: touch file_4.rb
+~/Desktop/w1d4_hw kevinbai$: touch file_5.rb
+~/Desktop/w1d4_hw kevinbai$: ls
+file_4.rb	new_file.rb	new_file_3.rb
+file_5.rb	new_file_2.rb	sample.rb
+~/Desktop/w1d4_hw kevinbai$: git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	file_4.rb
+	file_5.rb
+	new_file.rb
+
+nothing added to commit but untracked files present (use "git add" to track)
+~/Desktop/w1d4_hw kevinbai$: git reset --hard
+HEAD is now at 7722049 [first commit]
+~/Desktop/w1d4_hw kevinbai$: ls
+file_4.rb	new_file.rb	new_file_3.rb
+file_5.rb	new_file_2.rb	sample.rb
+~/Desktop/w1d4_hw kevinbai$: git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	file_4.rb
+	file_5.rb
+	new_file.rb
+
+nothing added to commit but untracked files present (use "git add" to track)
+~/Desktop/w1d4_hw kevinbai$: git reset --hard
+HEAD is now at 7722049 [first commit]
+~/Desktop/w1d4_hw kevinbai$: ls
+file_4.rb	new_file.rb	new_file_3.rb
+file_5.rb	new_file_2.rb	sample.rb
+~/Desktop/w1d4_hw kevinbai$: git reset --hard
+HEAD is now at 7722049 [first commit]
+~/Desktop/w1d4_hw kevinbai$: ls
+file_4.rb	new_file.rb	new_file_3.rb
+file_5.rb	new_file_2.rb	sample.rb
+~/Desktop/w1d4_hw kevinbai$: git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	file_4.rb
+	file_5.rb
+	new_file.rb
+
+nothing added to commit but untracked files present (use "git add" to track)
+~/Desktop/w1d4_hw kevinbai$: ls
+file_4.rb	new_file.rb	new_file_3.rb
+file_5.rb	new_file_2.rb	sample.rb
+~/Desktop/w1d4_hw kevinbai$: touch file_6.rb
+~/Desktop/w1d4_hw kevinbai$: git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	file_4.rb
+	file_5.rb
+	file_6.rb
+	new_file.rb
+
+nothing added to commit but untracked files present (use "git add" to track)
+~/Desktop/w1d4_hw kevinbai$: git add file_6.rb 
+~/Desktop/w1d4_hw kevinbai$: git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   file_6.rb
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	file_4.rb
+	file_5.rb
+	new_file.rb
+
+~/Desktop/w1d4_hw kevinbai$: git reset --hard
+HEAD is now at 7722049 [first commit]
+~/Desktop/w1d4_hw kevinbai$: git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	file_4.rb
+	file_5.rb
+	new_file.rb
+
+nothing added to commit but untracked files present (use "git add" to track)
+~/Desktop/w1d4_hw kevinbai$: ls
+file_4.rb	new_file.rb	new_file_3.rb
+file_5.rb	new_file_2.rb	sample.rb
+~/Desktop/w1d4_hw kevinbai$: git reset --hard
+HEAD is now at 7722049 [first commit]
+~/Desktop/w1d4_hw kevinbai$: git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	file_4.rb
+	file_5.rb
+	new_file.rb
+
+nothing added to commit but untracked files present (use "git add" to track)
+~/Desktop/w1d4_hw kevinbai$: git log
+commit 7722049d0dc00879d32465cab0030ad5fdf3adb6 (HEAD -> master)
+Author: Kevin Bai <lkevin957@gmail.com>
+Date:   Wed Jan 9 21:02:51 2019 -0800
+
+    [first commit]
+~/Desktop/w1d4_hw kevinbai$: git commit -m '[second commit]'
+On branch master
+Untracked files:
+	file_4.rb
+	file_5.rb
+	new_file.rb
+
+nothing added to commit but untracked files present
+~/Desktop/w1d4_hw kevinbai$: git add -A
+~/Desktop/w1d4_hw kevinbai$: git commit -m '[second commit]'
+[master 439a08c] [second commit]
+ 3 files changed, 5 insertions(+)
+ create mode 100644 file_4.rb
+ create mode 100644 file_5.rb
+ create mode 100644 new_file.rb
+~/Desktop/w1d4_hw kevinbai$: git log -p
+commit 439a08c026838aace0aeaa593ce23ecf2174b70c (HEAD -> master)
+Author: Kevin Bai <lkevin957@gmail.com>
+Date:   Wed Jan 9 21:08:37 2019 -0800
+
+    [second commit]
+
+diff --git a/file_4.rb b/file_4.rb
+new file mode 100644
+index 0000000..e69de29
+diff --git a/file_5.rb b/file_5.rb
+new file mode 100644
+index 0000000..e69de29
+diff --git a/new_file.rb b/new_file.rb
+new file mode 100644
+index 0000000..0e4f466
+--- /dev/null
++++ b/new_file.rb
+@@ -0,0 +1,5 @@
++aaa
++aaaa
++aaa
++aaaa
++aaaa
+
+commit 7722049d0dc00879d32465cab0030ad5fdf3adb6
+Author: Kevin Bai <lkevin957@gmail.com>
+Date:   Wed Jan 9 21:02:51 2019 -0800
+
+    [first commit]
+
+diff --git a/new_file_2.rb b/new_file_2.rb
+new file mode 100644
+index 0000000..e69de29
+diff --git a/new_file_3.rb b/new_file_3.rb
+new file mode 100644
+index 0000000..e69de29
+diff --git a/sample.rb b/sample.rb
+new file mode 100644
+index 0000000..e69de29
+~/Desktop/w1d4_hw kevinbai$: 
+~/Desktop/w1d4_hw kevinbai$: git log
+commit 439a08c026838aace0aeaa593ce23ecf2174b70c (HEAD -> master)
+Author: Kevin Bai <lkevin957@gmail.com>
+Date:   Wed Jan 9 21:08:37 2019 -0800
+
+    [second commit]
+
+commit 7722049d0dc00879d32465cab0030ad5fdf3adb6
+Author: Kevin Bai <lkevin957@gmail.com>
+Date:   Wed Jan 9 21:02:51 2019 -0800
+
+    [first commit]
+~/Desktop/w1d4_hw kevinbai$: git checkout -b magic
+Switched to a new branch 'magic'
+~/Desktop/w1d4_hw kevinbai$: git branch
+* magic
+  master
+~/Desktop/w1d4_hw kevinbai$: touch rabbit.txt
+~/Desktop/w1d4_hw kevinbai$: git add rabbit.txt 
+~/Desktop/w1d4_hw kevinbai$: git commit -m '[magic commit]'
+[magic bc53d3e] [magic commit]
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 rabbit.txt
+~/Desktop/w1d4_hw kevinbai$: git checkout master
+Switched to branch 'master'
+~/Desktop/w1d4_hw kevinbai$: git branch
+  magic
+* master
+~/Desktop/w1d4_hw kevinbai$: ls
+file_4.rb	new_file.rb	new_file_3.rb
+file_5.rb	new_file_2.rb	sample.rb
+~/Desktop/w1d4_hw kevinbai$: git checkout magic
+Switched to branch 'magic'
+~/Desktop/w1d4_hw kevinbai$: ls
+file_4.rb	new_file.rb	new_file_3.rb	sample.rb
+file_5.rb	new_file_2.rb	rabbit.txt
+~/Desktop/w1d4_hw kevinbai$: ls
+file_4.rb	new_file.rb	new_file_3.rb	sample.rb
+file_5.rb	new_file_2.rb	rabbit.txt
+~/Desktop/w1d4_hw kevinbai$: git checkout -b more_magic
+Switched to a new branch 'more_magic'
+~/Desktop/w1d4_hw kevinbai$: git branch
+  magic
+  master
+* more_magic
+~/Desktop/w1d4_hw kevinbai$: git status
+On branch more_magic
+nothing to commit, working tree clean
+~/Desktop/w1d4_hw kevinbai$: touch more_rabbit.txt
+~/Desktop/w1d4_hw kevinbai$: git status
+On branch more_magic
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	more_rabbit.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+~/Desktop/w1d4_hw kevinbai$: git add more_rabbit.txt 
+~/Desktop/w1d4_hw kevinbai$: git commit -m '[magic commit 2]'
+[more_magic 50f4068] [magic commit 2]
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 more_rabbit.txt
+~/Desktop/w1d4_hw kevinbai$: git checkout master
+Switched to branch 'master'
+~/Desktop/w1d4_hw kevinbai$: git branch
+  magic
+* master
+  more_magic
+~/Desktop/w1d4_hw kevinbai$: git merge magic
+Updating 439a08c..bc53d3e
+Fast-forward
+ rabbit.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 rabbit.txt
+~/Desktop/w1d4_hw kevinbai$: ls
+file_4.rb	new_file.rb	new_file_3.rb	sample.rb
+file_5.rb	new_file_2.rb	rabbit.txt
+~/Desktop/w1d4_hw kevinbai$: git branch
+  magic
+* master
+  more_magic
+~/Desktop/w1d4_hw kevinbai$: git branch
+  magic
+* master
+  more_magic
+~/Desktop/w1d4_hw kevinbai$: git merge magic
+Already up to date.
+~/Desktop/w1d4_hw kevinbai$: git branch
+  magic
+* master
+  more_magic
+~/Desktop/w1d4_hw kevinbai$: -u
+-bash: -u: command not found
+~/Desktop/w1d4_hw kevinbai$: git config --u
+error: Ambiguous option: u (could be --unset or --unset-all)
+usage: git config [<options>]
+
+Config file location
+    --global              use global config file
+    --system              use system config file
+    --local               use repository config file
+    -f, --file <file>     use given config file
+    --blob <blob-id>      read config from given blob object
+
+Action
+    --get                 get value: name [value-regex]
+    --get-all             get all values: key [value-regex]
+    --get-regexp          get values for regexp: name-regex [value-regex]
+    --get-urlmatch        get value specific for the URL: section[.var] URL
+    --replace-all         replace all matching variables: name value [value_regex]
+    --add                 add a new variable: name value
+    --unset               remove a variable: name [value-regex]
+    --unset-all           remove all matches: name [value-regex]
+    --rename-section      rename section: old-name new-name
+    --remove-section      remove a section: name
+    -l, --list            list all
+    -e, --edit            open an editor
+    --get-color           find the color configured: slot [default]
+    --get-colorbool       find the color setting: slot [stdout-is-tty]
+
+Type
+    -t, --type <>         value is given this type
+    --bool                value is "true" or "false"
+    --int                 value is decimal number
+    --bool-or-int         value is --bool or --int
+    --path                value is a path (file or directory name)
+    --expiry-date         value is an expiry date
+
+Other
+    -z, --null            terminate values with NUL byte
+    --name-only           show variable names only
+    --includes            respect include directives on lookup
+    --show-origin         show origin of config (file, standard input, blob, command line)
+    --default <value>     with --get, use default value when missing entry
+
+~/Desktop/w1d4_hw kevinbai$: git -u origin master
+unknown option: -u
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+~/Desktop/w1d4_hw kevinbai$: git push -u origin master
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+~/Desktop/w1d4_hw kevinbai$: git push
+fatal: No configured push destination.
+Either specify the URL from the command-line or configure a remote repository using
+
+    git remote add <name> <url>
+
+and then push using the remote name
+
+    git push <name>
+
+~/Desktop/w1d4_hw kevinbai$: git remote add origin https://github.com/zkevinbai/gitpractice_1
+~/Desktop/w1d4_hw kevinbai$: git push origin
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin master
+
+~/Desktop/w1d4_hw kevinbai$: git push -u origin master
+Username for 'https://github.com': zkevinbai
+Password for 'https://zkevinbai@github.com': 
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/zkevinbai/gitpractice_1/'
+~/Desktop/w1d4_hw kevinbai$: git push -u origin master
+Username for 'https://github.com': zkevinbai
+Password for 'https://zkevinbai@github.com': 
+To https://github.com/zkevinbai/gitpractice_1
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/zkevinbai/gitpractice_1'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+~/Desktop/w1d4_hw kevinbai$: git push -u origin master
+To https://github.com/zkevinbai/gitpractice_1
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/zkevinbai/gitpractice_1'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+~/Desktop/w1d4_hw kevinbai$: git status
+On branch master
+nothing to commit, working tree clean
+~/Desktop/w1d4_hw kevinbai$: git log
+commit bc53d3e577be4223178dc8eb509b69b01d5ea6b8 (HEAD -> master, magic)
+Author: Kevin Bai <lkevin957@gmail.com>
+Date:   Wed Jan 9 21:10:02 2019 -0800
+
+    [magic commit]
+
+commit 439a08c026838aace0aeaa593ce23ecf2174b70c
+Author: Kevin Bai <lkevin957@gmail.com>
+Date:   Wed Jan 9 21:08:37 2019 -0800
+
+    [second commit]
+
+commit 7722049d0dc00879d32465cab0030ad5fdf3adb6
+Author: Kevin Bai <lkevin957@gmail.com>
+Date:   Wed Jan 9 21:02:51 2019 -0800
+
+    [first commit]
+~/Desktop/w1d4_hw kevinbai$: git push -u origin mastergit remote add origin https://github.com/zkevinbai/gitpractice_1
+fatal: invalid refspec 'https://github.com/zkevinbai/gitpractice_1'
+~/Desktop/w1d4_hw kevinbai$: git remote add origin https://github.com/zkevinbai/gitpractice_1
+fatal: remote origin already exists.
+~/Desktop/w1d4_hw kevinbai$: git remote add origin https://github.com/zkevinbai/gitpractice_1.git
+fatal: remote origin already exists.
+~/Desktop/w1d4_hw kevinbai$: git push master
+fatal: 'master' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+~/Desktop/w1d4_hw kevinbai$: git push origin master
+To https://github.com/zkevinbai/gitpractice_1
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/zkevinbai/gitpractice_1'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+~/Desktop/w1d4_hw kevinbai$: git push origin master
+To https://github.com/zkevinbai/gitpractice_1
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/zkevinbai/gitpractice_1'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+~/Desktop/w1d4_hw kevinbai$: git remote fetch 
+error: Unknown subcommand: fetch
+usage: git remote [-v | --verbose]
+   or: git remote add [-t <branch>] [-m <master>] [-f] [--tags | --no-tags] [--mirror=<fetch|push>] <name> <url>
+   or: git remote rename <old> <new>
+   or: git remote remove <name>
+   or: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+   or: git remote [-v | --verbose] show [-n] <name>
+   or: git remote prune [-n | --dry-run] <name>
+   or: git remote [-v | --verbose] update [-p | --prune] [(<group> | <remote>)...]
+   or: git remote set-branches [--add] <name> <branch>...
+   or: git remote get-url [--push] [--all] <name>
+   or: git remote set-url [--push] <name> <newurl> [<oldurl>]
+   or: git remote set-url --add <name> <newurl>
+   or: git remote set-url --delete <name> <url>
+
+    -v, --verbose         be verbose; must be placed before a subcommand
+
+~/Desktop/w1d4_hw kevinbai$: git push origin master
+To https://github.com/zkevinbai/gitpractice_1
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/zkevinbai/gitpractice_1'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+~/Desktop/w1d4_hw kevinbai$: --help
+-bash: --help: command not found
+~/Desktop/w1d4_hw kevinbai$: git push --help
+~/Desktop/w1d4_hw kevinbai$: git push origin
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin master
+
+~/Desktop/w1d4_hw kevinbai$: git push origin master
+To https://github.com/zkevinbai/gitpractice_1
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/zkevinbai/gitpractice_1'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+~/Desktop/w1d4_hw kevinbai$: git remote add origin2 https://github.com/zkevinbai/gitpractice_1
+~/Desktop/w1d4_hw kevinbai$: git push -u origin2 master
+To https://github.com/zkevinbai/gitpractice_1
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/zkevinbai/gitpractice_1'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+~/Desktop/w1d4_hw kevinbai$: git push -u origin2 master
+To https://github.com/zkevinbai/gitpractice_1
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/zkevinbai/gitpractice_1'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+~/Desktop/w1d4_hw kevinbai$: git remote
+origin
+origin2
+~/Desktop/w1d4_hw kevinbai$: git push origin2
+To https://github.com/zkevinbai/gitpractice_1
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/zkevinbai/gitpractice_1'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+~/Desktop/w1d4_hw kevinbai$: git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	LICENSE
+
+nothing added to commit but untracked files present (use "git add" to track)
+~/Desktop/w1d4_hw kevinbai$: git add -A
+~/Desktop/w1d4_hw kevinbai$: git push origin2 
+To https://github.com/zkevinbai/gitpractice_1
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/zkevinbai/gitpractice_1'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+~/Desktop/w1d4_hw kevinbai$: git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   LICENSE
+
+~/Desktop/w1d4_hw kevinbai$: git commit -m "add license"
+[master e35a2e6] add license
+ 1 file changed, 21 insertions(+)
+ create mode 100755 LICENSE
+~/Desktop/w1d4_hw kevinbai$: git status
+On branch master
+nothing to commit, working tree clean
+~/Desktop/w1d4_hw kevinbai$: git push origin2
+To https://github.com/zkevinbai/gitpractice_1
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/zkevinbai/gitpractice_1'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+~/Desktop/w1d4_hw kevinbai$: git remote add origin https://github.com/zkevinbai/sure.git
+fatal: remote origin already exists.
+~/Desktop/w1d4_hw kevinbai$: git remote add origin3 https://github.com/zkevinbai/sure.git
+~/Desktop/w1d4_hw kevinbai$: git push -u origin3 master
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (9/9), done.
+Writing objects: 100% (11/11), 1.45 KiB | 1.45 MiB/s, done.
+Total 11 (delta 3), reused 0 (delta 0)
+remote: Resolving deltas: 100% (3/3), done.
+^[[ATo https://github.com/zkevinbai/sure.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin3'.
+~/Desktop/w1d4_hw kevinbai$: git push origin3
+Everything up-to-date
+~/Desktop/w1d4_hw kevinbai$: git push origin3
+Everything up-to-date
+~/Desktop/w1d4_hw kevinbai$: 
+~/Desktop/w1d4_hw kevinbai$: 
+~/Desktop/w1d4_hw kevinbai$: cd .git
+~/Desktop/w1d4_hw/.git kevinbai$: ls
+COMMIT_EDITMSG	ORIG_HEAD	description	index		logs		refs
+HEAD		config		hooks		info		objects
+~/Desktop/w1d4_hw/.git kevinbai$: 

@@ -1,0 +1,36 @@
+<div class="lineup">
+    <h2>Here's the Lineup</h2>
+</div>
+
+<div class="bands">
+    <ol>
+        <% @bands.each do |band| %>
+            <li><%= band.name %></li>
+        <% end %>
+    </ol>
+</div>
+
+<div class="newband">
+    <form action="<%= bands_url %>" method="post">
+        <%= auth_token %>
+        <label for="name">
+            <input type="text" name="band[name]">
+        </label>        
+        <input type="submit" value="Add a New Band">
+    </form>
+</div>
+
+<div class="removeband">
+    <form action="<%= bands_destroy_url %>" method="post">
+        <input type="hidden" name="_method" value="delete">
+        <%= auth_token %>
+        <label for="name">
+            <input type="text" name="band[name]">
+        </label>
+        <input type="submit" value="Delete This Band">
+    </form>
+</div>
+
+<div class="newsongs">
+
+</div>

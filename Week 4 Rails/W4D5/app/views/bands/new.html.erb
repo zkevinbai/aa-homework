@@ -1,0 +1,14 @@
+<h2>Time for a New Artist!</h2>
+
+<%= flash[:error] if flash[:error] %>
+
+<form class="users_form" action="<%=bands_url%>" method="post">
+    <%=auth_token%>
+    
+    <label for="name">Band Name:
+        <input type="text" name="band[name]">
+    </label>
+    <br>
+
+    <input type="submit" value="Create New Band">
+</form>
