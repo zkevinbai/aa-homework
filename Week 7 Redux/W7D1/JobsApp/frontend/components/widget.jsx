@@ -15,17 +15,17 @@ class Widget extends React.Component {
   }
 
   fetchJobListings(city) {
+    console.log(city);
     $.ajax({
       crossDomain: true,
-      dataType: 'jsonp',
+      dataType: 'json',
       url: `https://jobs.github.com/positions.json?location=${city}&markdown=true`,
       type: "GET",
       success: function(resp) {
         // tell the store to update with the new location and jobs;
         // use the action creator 'selectLocation' to build the object to
         // be dispatched
-        this.props.store.dispatch(this.selectLocation(city, resp))
-
+        this.props.store.dispatch(this.selectLocation(city, resp));
       }.bind(this)
     });
   }
@@ -37,8 +37,8 @@ class Widget extends React.Component {
     const { city, jobs } = this.props.store.getState();
     const cityOptions = this.cities.map(city => (
         <button onClick={ () => { this.fetchJobListings(city) }}
-             key={city}
-             className="job-option">
+          key={city}
+          className="job-option">
           {city}
         </button>
       )
