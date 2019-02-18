@@ -8,38 +8,97 @@
 	<title>JustWrite</title>
 	<link rel="icon" href="./logo.png">
 	<link rel="stylesheet" type="text/css" href="index.css">
+	<link href="https://fonts.googleapis.com/css?family=ZCOOL+QingKe+HuangYou" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+	integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
 </head>
 
 <body>
-	<h1 class="headline"><img class="headimg" src="./logo.png">JustWrite: The only note taking app you'll ever need.</h1>
+	<h1 class="headline"><img class="headimg" src="./logo.png">JustWrite</h1>
 
-	<span class="nav-links">
-		<a href="#">about us</a>
-		<a href="#">careers</a>
-		<a href="#">contact</a>
-	</span>
-
-	<form class="search" action="#" onclick="">
+	<form class="search lbar" action="#" onclick="">
 		<h2>Find a List</h2>
-		<input type="text"/>
-		<input type="submit" value="Search"/>
+		<span class="searchbar">
+			<input type="text"/>
+			<button class="fas fa-search"></button>
+		</span>
 	</form>
 
-	<form class="newlist" action="#" onclick="">
+	<form class="newlist lbar" action="#" onclick="">
 		<h2>Create a List</h2>
-		<input type="text"/>
-		<input type="submit" value="New List"/>
+		<span class="searchbar">
+			<input type="text" />
+			<button class="fas fa-newspaper"></button>
+		</span>
 	</form>
 
-	<form class="additem" action="#" onclick="">
+	<form class="additem lbar" action="#" onclick="">
 		<h2>Add List Item</h2>
-		List:<input type="text" />
-		Item:<input type="text" />
-		<input type="submit" value="New List Item" />
+		<!-- List:<span class="searchbar">
+			<input type="text" />
+		</span>
+		<br>
+		<br> -->
+		<span class="searchbar">
+			<input type="text" />
+			<button class="fas fa-sitemap"></button>
+		</span>
 	</form>
 
-	<span class="copyright">
-		Copyright 2016
+	
+	<div class="content">
+		<label>Lists:
+			<ul class="lists">
+				<li>Shopping List</li>
+				<li>Places I want to Visit Someday</li>
+				<li>Workout Plan</li>
+				<li>Favorite Quotes</li>
+			</ul>
+		</label>
+		<label>Shopping:
+			<ul class="shopping">
+				<li>Shopping List</li>
+				<li>Places I want to Visit Someday</li>
+				<li>Workout Plan</li>
+				<li>Favorite Quotes</li>
+			</ul>
+		</label>
+		<label>Travel:
+			<ul class="travel">
+				<li>Shopping List</li>
+				<li>Places I want to Visit Someday</li>
+				<li>Workout Plan</li>
+				<li>Favorite Quotes</li>
+			</ul>
+		</label>
+		<label>Workout:
+			<ul class="workout">
+				<li>Shopping List</li>
+				<li>Places I want to Visit Someday</li>
+				<li>Workout Plan</li>
+				<li>Favorite Quotes</li>
+			</ul>
+		</label>
+		<label>Quotes:
+			<ul class="quotes">
+				<li>Shopping List</li>
+				<li>Places I want to Visit Someday</li>
+				<li>Workout Plan</li>
+				<li>Favorite Quotes</li>
+			</ul>
+		</label>
+
+		<textarea></textarea>
+	</div>
+	<span class="top"> </span>
+	<span class="left"></span>
+	<span class="right"></span>
+	<span class="mid"></span>
+
+	<span class="return">
+		<a class="fas fa-exchange-alt" href="./splash.html"></a>
 	</span>
 </body>
 </html>
