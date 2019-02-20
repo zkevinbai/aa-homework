@@ -20,10 +20,9 @@ class GiphysIndex extends React.Component{
             console.log(this.getEmbededUrls());
         }
         return (
-        <div>
-            <h1>Search Results</h1>
-            {this.getEmbededUrls().map(url => (
-                <GiphysIndexItem embed_url = {url}/>
+        <div className="gifs">
+            {this.getEmbededUrls().map((url, idx) => (
+                <GiphysIndexItem embed_url = {url} idx={idx}/>
             ))}
         </div>
         )
@@ -31,8 +30,8 @@ class GiphysIndex extends React.Component{
 }
 
 export default GiphysIndex;
-//                 <iframe src="https://giphy.com/embed/JIX9t2j0ZTN9S" width="480" height="480" frameBorder="0" allowFullScreen></iframe><p></p>
-//             <img src={"https://giphy.com/gifs/JIX9t2j0ZTN9S}></img>
+// <iframe src="https://giphy.com/embed/JIX9t2j0ZTN9S" width="480" height="480" frameBorder="0" allowFullScreen></iframe><p></p>
+// <img src={"https://giphy.com/gifs/JIX9t2j0ZTN9S}></img>
 
 // this.props.gifs.map(gif => {
 //     return <GiphysIndex embed_url={gif.embed_url} />

@@ -8,7 +8,7 @@ class GiphyIndexItem extends React.Component{
 
     render(){
         return(
-            <iframe src={this.props.embed_url} width="480" height="480" frameBorder="0" allowFullScreen></iframe>
+            <iframe className={"gif" + this.props.idx + "item"} src={this.props.embed_url} width="420" height="420" frameBorder="-10" allowFullScreen></iframe>
         )
     }
 }
