@@ -12,9 +12,8 @@ export const receiveSearchGiphys = giphys => {
 
 // debugger
 export const fetchSearchGiphys = (searchTerm) => {
-    console.log("dont get confused");
     return (dispatch) => {
-        APIUtil.fetchSearchGiphys(searchTerm)
+        return APIUtil.fetchSearchGiphys(searchTerm)
             .then(giphys => dispatch(receiveSearchGiphys(giphys.data)));
     };
 };

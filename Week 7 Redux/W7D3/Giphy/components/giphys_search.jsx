@@ -6,7 +6,7 @@ class GiphysSearch extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-            query: ""
+            query: "",
         };
     }
 
@@ -22,14 +22,19 @@ class GiphysSearch extends React.Component {
     }
 
     render(){
+        console.log(this.props.giphys[0]);
+        window.gif = this.props.giphys[0];
         return (
-            <form onSubmit={ (e) => this.giphySearch(e) } >
-                <label><h1>Giphy Search</h1>
-                    <input type="text" onChange={ (e) => this.handleChange(e) }></input>
-                </label>
-                <br></br>
-                <input type="submit"></input>
-            </form>
+            <div>
+                <form onSubmit={ (e) => this.giphySearch(e) } >
+                    <label><h1>Giphy Search</h1>
+                        <input type="text" onChange={ (e) => this.handleChange(e) }></input>
+                    </label>
+                    <br></br>
+                    <input type="submit"></input>
+                </form>
+                <GiphysIndex gifs={this.props.giphys} />
+            </div>
         )
     }
 }
