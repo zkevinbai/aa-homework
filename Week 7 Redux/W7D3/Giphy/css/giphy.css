@@ -36,6 +36,11 @@ button {
   font-size: 10px;
 }
 
+body{
+  width: 100vw; 
+  height: 100vh;
+}
+
 .content{
   background-image: linear-gradient(to bottom right, red, yellow);
   display: grid;
