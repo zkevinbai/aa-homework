@@ -75,7 +75,6 @@ body{
 }
 
 .gifs{
-  /* background: red; */
   grid-row: 1/6;
   grid-column: 1/6;
   display: grid;
@@ -87,7 +86,6 @@ body{
 }
 
 .search{
-  /* background: blue; */
   grid-row: 3;
   grid-column: 3;
   z-index: 1;
